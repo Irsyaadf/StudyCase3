@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable prettier/prettier */
 import {
   Controller,
   Get,
@@ -12,7 +9,6 @@ import {
   HttpCode,
   NotFoundException,
   BadRequestException,
-  Query,
   ParseIntPipe,
   InternalServerErrorException,
 } from '@nestjs/common';

@@ -1,8 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable prettier/prettier */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { EmployeeRepository } from '../app/api/employee/repositories';
 import { Employee } from '@prisma/client';
@@ -27,7 +22,7 @@ export class EmployeeService {
     return this.employeeRepository.update(id, data);
   }
 
-  async softDelete(id: number, updatedBy: string) {  // Pastikan method ini ada!
+  async softDelete(id: number, updatedBy: string) {
     const employee = await this.employeeRepository.findById(id);
     if (!employee) {
       throw new NotFoundException('Employee not found');

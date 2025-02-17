@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
 import { EmployeeController } from './route';
 import { EmployeeService } from '../../../services/employee.service';

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { useEffect, useState } from "react";
@@ -164,7 +163,10 @@ export default function EmployeeListPage() {
       key: "position",
       align: "center",
     },
-    { title: "Salary", dataIndex: "salary", key: "salary", align: "center" },
+    { title: "Salary", 
+      dataIndex: "salary", 
+      key: "salary", 
+      align: "center" },
     {
       title: "Status",
       dataIndex: "status",
@@ -182,12 +184,45 @@ export default function EmployeeListPage() {
       render: (date) => formatDate(date),
     },
     {
+      title: "Created By",
+      dataIndex: "createdBy",
+      key: "createdBy",
+      align: "center",
+    },
+    {
+      title: "Created At",
+      dataIndex: "createdAt",
+      key: "createdAt",
+      align: "center",
+      render: (date) => formatDate(date),
+    },
+    {
+      title: "Updated By",
+      dataIndex: "updatedBy",
+      key: "updatedBy",
+      align: "center",
+    },
+    {
+      title: "Updated At",
+      dataIndex: "updatedAt",
+      key: "updatedAt",
+      align: "center",
+      render: (date) => formatDate(date),
+    },
+    {
+      title: "Deleted At",
+      dataIndex: "deletedAt",
+      key: "deletedAt",
+      align: "center",
+      render: (date) => formatDate(date),
+    },
+    {
       title: "Actions",
       key: "action",
       align: "center",
       render: (_, record) => (
         <Dropdown
-          overlay={
+          menu={
             <Menu>
               <Menu.Item key="edit" onClick={() => showModal(record)}>
                 Edit
@@ -306,7 +341,7 @@ export default function EmployeeListPage() {
                 name="hireDate"
                 rules={[{ required: true }]}
               >
-                <DatePicker style={{ width: "100%" }} />
+                <DatePicker className="w-full" />
               </Form.Item>
             </Col>
           </Row>

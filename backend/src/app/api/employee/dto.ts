@@ -29,13 +29,13 @@ export class CreateEmployeeDto {
     const num = Number(value);
     return isNaN(num) ? undefined : num;
   })
-  salary: string; // Changed to string to handle the string type salary from the frontend
+  salary: string;
 
   @IsEmail({}, { message: 'Invalid email format' })
   email: string;
 
   @IsString()
-  @Transform(({ value }) => value.replace(/\D/g, "")) // Ensure only digits are allowed for phoneNumber
+  @Transform(({ value }) => value.replace(/\D/g, ""))
   phoneNumber: string;
 
   @IsString()

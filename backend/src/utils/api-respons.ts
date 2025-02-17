@@ -1,5 +1,3 @@
-/* eslint-disable prettier/prettier */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 export class ApiResponse {
     static success(message: string, data: any = null) {
       return {
