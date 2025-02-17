@@ -5,9 +5,6 @@ export function formatDate(date: string | Date | null): string {
   return date ? dayjs(date).format("DD MMM YYYY, HH:mm") : "-";
 }
 
-/**
- * Fungsi untuk mendapatkan warna sesuai status karyawan.
- */
 export function getStatusColor(status: string): string {
   const statusColors: Record<string, string> = {
     ACTIVE: "green",

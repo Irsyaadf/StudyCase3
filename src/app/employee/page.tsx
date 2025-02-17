@@ -237,7 +237,7 @@ export default function EmployeeListPage() {
         columns={columns.filter((col) =>
           selectedColumns.includes(col.key as string)
         )}
-        dataSource={activeEmployees} // Hanya menampilkan yang tidak terhapus
+        dataSource={activeEmployees} 
         loading={loading}
         rowKey="id"
         pagination={{ pageSize: 5 }}

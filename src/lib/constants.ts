@@ -1,4 +1,3 @@
-// src/lib/constants.ts
 "use client";
 
 export const EMPLOYEE_STATUSES = [

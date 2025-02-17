@@ -3,7 +3,7 @@
 import { Layout, Menu, Dropdown } from "antd";
 import { UserOutlined, LogoutOutlined } from "@ant-design/icons";
 import Link from "next/link";
-import { usePathname } from "next/navigation";  // 🔥 Import path
+import { usePathname } from "next/navigation";  
 
 const { Header } = Layout;
 
@@ -12,8 +12,8 @@ export default function AppHeader() {
     console.log("User logged out");
   };
 
-  const pathname = usePathname();  // 🔥 Dapatkan URL saat ini
-  const selectedKey = pathname.startsWith("/employee/deleted") ? "2" : "1";  // 🔥 Tentukan key menu
+  const pathname = usePathname();
+  const selectedKey = pathname.startsWith("/employee/deleted") ? "2" : "1"; 
 
   const userMenuItems = [
     {
@@ -35,7 +35,7 @@ export default function AppHeader() {
 
       <Menu
         mode="horizontal"
-        selectedKeys={[selectedKey]}  // 🔥 Set selected item secara dinamis
+        selectedKeys={[selectedKey]}
         className="border-none flex-1 justify-center bg-transparent"
         items={[
           { key: "1", label: <Link href="/employee" className="text-gray-700 hover:text-blue-600">Employees</Link> },
